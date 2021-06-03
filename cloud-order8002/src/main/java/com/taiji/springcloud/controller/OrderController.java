@@ -13,7 +13,8 @@ import org.springframework.web.client.RestTemplate;
 @RequestMapping("/oder")
 public class OrderController {
 
-    private static final String url = "http://localhost:8001";
+//    private static final String url = "http://localhost:8001";
+    private static final String url = "http://CLOUD-PROVIDER-SERVICE";
 
     @Autowired
     private RestTemplate restTemplate;
