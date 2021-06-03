@@ -4,6 +4,9 @@ server:
     context-path: /order
 # eureka客户端
 eureka:
+  instance:
+    instance-id: order8002
+    prefer-ip-address: true #访问路径可以显示IP地址
   client:
     # 表示是否把自己注册进eurekaserver 默认为true
     register-with-eureka: true
