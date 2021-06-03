@@ -12,6 +12,12 @@
     <artifactId>cloud-provider-payment8001</artifactId>
 
     <dependencies>
+        <!--客户端-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
+        <!--引用公共jar包-->
         <dependency>
             <groupId>com.taiji.springcloud</groupId>
             <artifactId>cloud-common</artifactId>
