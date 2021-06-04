@@ -1,11 +1,11 @@
 server:
   port: 6001
   servlet:
-    context-path: /zookeeperCloud
+    context-path: /zookeeperPayment
 # 服务别名---注册zookeeper到注册中心名称
 spring:
   application:
-    name: cloud-zookeeper-service
+    name: cloud-zookeeper-payment
   cloud:
     zookeeper:
       connect-string: 192.168.159.128:2181
