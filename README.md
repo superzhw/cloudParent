@@ -13,5 +13,7 @@ springcloud demo项目
 #使用zookeeper注册中心
 现在lunix系统下安装zookeeper环境，正常启动后，新建项目，引入jar包，改yml，主启动，把服务注册进zookeeper服务中心（并且是临时节点，一定时间后自动删除）
 
+#consul 安装下载
+在官网上下载consul，然后在当前路径下 consul --verison 查看版本，consul agent -dev 启动consul，访问路径：http://localhost:8500/
 
 

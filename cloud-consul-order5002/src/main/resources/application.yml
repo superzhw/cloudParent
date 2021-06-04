@@ -1,0 +1,17 @@
+server:
+  port: 5002
+  servlet:
+    context-path: /consulOrder
+# 服务别名---注册zookeeper到注册中心名称
+spring:
+  application:
+    name: cloud-consul-order
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        service-name: ${spring.application.name}
+        # 心跳机制没有打开 报红
+        heartbeat:
+          enabled: true

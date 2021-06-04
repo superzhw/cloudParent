@@ -6,9 +6,9 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 @SpringBootApplication
 @EnableEurekaClient
-public class OrderMain8002 {
+public class EurekaPayMentMain8011 {
     public static void main(String[] args) {
-        SpringApplication.run(OrderMain8002.class,args);
-        System.out.println("8002启动成功");
+        SpringApplication.run(EurekaPayMentMain8011.class, args);
+        System.out.println("8011启动成功");
     }
 }
