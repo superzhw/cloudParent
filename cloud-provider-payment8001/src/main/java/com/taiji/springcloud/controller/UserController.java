@@ -39,8 +39,8 @@ public class UserController {
         return result;
     }
     @ResponseBody
-    @GetMapping("/user/findUserById")
-    public Result findUserById(int id){
+    @GetMapping("/user/findUserById/{id}")
+    public Result findUserById(@PathVariable("id") int id){
         Result result = null;
         try {
             User user = userService.findUserById(id);

@@ -1,0 +1,21 @@
+server:
+  port: 8003
+  servlet:
+    context-path: /order
+# eureka客户端
+eureka:
+  instance:
+    instance-id: order8003
+    prefer-ip-address: true #访问路径可以显示IP地址
+  client:
+    # 表示是否把自己注册进eurekaserver 默认为true
+    register-with-eureka: true
+    # 是否从eurekaserver抓取已有的注册信息，默认为true，单节点无所谓，集群必须设置为true才能配合ribbon使用负载均衡
+    fetch-registry: true
+    service-url:
+#      defaultZone: http://localhost:7001/eureka
+      defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka
+# 服务名
+spring:
+  application:
+    name: cloud-open-order-service

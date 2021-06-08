@@ -18,9 +18,10 @@
       <module>cloud-eureka-server7002</module>
       <module>cloud-provider-payment8011</module>
       <module>cloud-zookeeper-payment6001</module>
-    <module>cloud-zookeeper-order6002</module>
+      <module>cloud-zookeeper-order6002</module>
       <module>cloud-consul-payment5001</module>
       <module>cloud-consul-order5002</module>
+    <module>cloud-order-openfeign8003</module>
   </modules>
 
   <!--统一管理jar包版本 聚合统一管理版本-->
