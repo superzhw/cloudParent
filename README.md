@@ -18,5 +18,8 @@ springcloud demo项目
 #consul 安装下载
 在官网上下载consul，然后在当前路径下 consul --verison 查看版本，consul agent -dev 启动consul，访问路径：http://localhost:8500/
 
+#open feign服务调用 内置负载均衡（默认轮询）
+服务提供方不用操作，在服务消费方配置（即只需要定义服务绑定接口切以声明式 接口+注解 === 微服务调用接口 + @FeignClient）
+
 
 
