@@ -22,6 +22,7 @@ public class PaymentServiceImpl implements PaymentService {
     /**
      * 延迟方法
      * 服务降级：一旦调用服务方法失败并抛出了错误信息后，会自动调用@HystrixCommand标注好的fallbackMethod调用类中的指定方法
+     * 不管是超时异常还是运行异常，只要当前服务不可用了，都做服务降级，执行的方法为paymentInfo_TimeoutHandler
      * @param id
      * @return
      */
