@@ -25,7 +25,6 @@ public class PaymentController {
      */
 
     @GetMapping("/hystrix/ok/{id}")
-    @ResponseBody
     public Result paymentInfo_ok(@PathVariable("id") Integer id){
         String s = paymentService.paymentInfo_ok(id);
         return new Result(200,"正常接口返回",s);
@@ -38,7 +37,6 @@ public class PaymentController {
      * @return
      */
     @GetMapping("/hystrix/timeout/{id}")
-    @ResponseBody
     public Result paymentInfo_timeout(@PathVariable("id") Integer id){
         String s = paymentService.paymentInfo_timeout(id);
         return new Result(200,"延迟方法",s);

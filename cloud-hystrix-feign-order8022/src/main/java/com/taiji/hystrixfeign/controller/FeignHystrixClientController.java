@@ -23,7 +23,6 @@ public class FeignHystrixClientController {
      */
 
     @GetMapping("/hystrix/ok/{id}")
-    @ResponseBody
     public Result paymentInfo_ok(@PathVariable("id") Integer id){
         return feignClientService.paymentInfo_ok(id);
     }
@@ -34,15 +33,14 @@ public class FeignHystrixClientController {
      * @return
      */
     @GetMapping("/hystrix/timeout/{id}")
-    @ResponseBody
     @HystrixCommand(fallbackMethod = "paymentInfoTimeoutHandler", commandProperties = {
-            @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "3000")
+            @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "5000")
     })
     public Result paymentInfo_timeout(@PathVariable("id") Integer id){
        return feignClientService.paymentInfo_timeout(id);
     }
 
-    public  String paymentInfoTimeoutHandler(Integer id){
-        return "paymentInfoTimeoutHandler线程池： " + Thread.currentThread().getName() + "  {}{}id:   "+id;
+    public  Result paymentInfoTimeoutHandler(Integer id){
+        return new Result(444,"8022消费端服务降级","paymentInfoTimeoutHandler线程池： " + Thread.currentThread().getName() + "  {}{}id:   "+id);
     }
 }
