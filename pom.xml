@@ -22,6 +22,8 @@
       <module>cloud-consul-payment5001</module>
       <module>cloud-consul-order5002</module>
     <module>cloud-order-openfeign8003</module>
+      <module>cloud-hystrix-payment8021</module>
+      <module>cloud-hystrix-feign-order8022</module>
   </modules>
 
   <!--统一管理jar包版本 聚合统一管理版本-->
