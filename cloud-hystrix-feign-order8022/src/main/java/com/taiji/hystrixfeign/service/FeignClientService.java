@@ -1,13 +1,14 @@
 package com.taiji.hystrixfeign.service;
 
 import com.taiji.hystrixfeign.common.Result;
+import com.taiji.hystrixfeign.service.impl.FeignClientServiceImpl;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
 @Component
-@FeignClient(value = "CLOUD-HYSTRIX-SERVICE")
+@FeignClient(value = "CLOUD-HYSTRIX-SERVICE", fallback = FeignClientServiceImpl.class)
 public interface FeignClientService {
     /**
      * 正常访问的方法
