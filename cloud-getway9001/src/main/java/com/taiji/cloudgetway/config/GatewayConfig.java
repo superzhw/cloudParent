@@ -19,6 +19,9 @@ public class GatewayConfig {
         routes.route("path_route1",
                 r -> r.path("/guonei")
                         .uri("http://news.baidu.com/guonei")).build();
+        routes.route("path_route1",
+                r -> r.path("/mil")
+                        .uri("http://news.baidu.com/mil")).build();
         return routes.build();
     }
 }

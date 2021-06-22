@@ -1,5 +1,13 @@
 # cloudParent
 springcloud demo项目
+- 集群 7001，7002 eureka 服务端
+6001 zookeeper服务提供者，6002 zookeeper服务消费者
+5001 consul服务提供者，5002 consul服务消费者
+9001 eureka-gateway 网关服务（cloud-gateway）
+8031 eureka-hystrix 服务断路器，图形化监控
+8003 eureka-openfeign 服务消费者（cloud-open-order-service），8002 eureka-ribbon 服务消费者（cloud-order-service），
+- 集群 8001 eureka 服务提供者（cloud-provider-service），8011 eureka 服务提供者（cloud-provider-service）
+8022 eureka-openfeign-hystrix 服务消费者（cloud-feign-hystrix-service），8021 eureka-openfeign-hystrix 服务提供者（cloud-hystrix-service）
 
 #添加host映射：
 127.0.0.1 eureka7001.com
@@ -29,4 +37,5 @@ http://localhost:8031/dashboard/hystrix hystrix限流监控
 Route(路由)
 Predicate(断言)
 Filter(过滤)
+
 
