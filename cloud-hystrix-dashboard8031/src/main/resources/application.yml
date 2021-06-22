@@ -1,0 +1,10 @@
+server:
+  port: 8031
+  servlet:
+    context-path: /dashboard
+#暴露全部的监控信息
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

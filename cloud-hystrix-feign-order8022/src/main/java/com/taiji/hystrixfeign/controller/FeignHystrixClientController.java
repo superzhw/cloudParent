@@ -10,8 +10,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.concurrent.TimeUnit;
-
 @RestController
 @DefaultProperties(defaultFallback = "globalFallbackMethod")
 public class FeignHystrixClientController {
@@ -31,7 +29,7 @@ public class FeignHystrixClientController {
     }
 
     /**
-     * 延迟方法
+     * 延迟方法 - 服务限流
      * @param id
      * @return
      */

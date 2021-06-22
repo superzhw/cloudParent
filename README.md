@@ -23,4 +23,10 @@ springcloud demo项目
 
 #hystrix断路器 （服务降级fallbak，服务熔断，服务限流）
 服务提供者 及 服务消费者 都可以使用
+http://localhost:8031/dashboard/hystrix hystrix限流监控
+
+#getway 三大核心概念
+Route(路由)
+Predicate(断言)
+Filter(过滤)
 
