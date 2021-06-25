@@ -1,0 +1,32 @@
+server:
+  port: 3355
+# eureka客户端
+eureka:
+  instance:
+    instance-id: config3355
+    prefer-ip-address: true #访问路径可以显示IP地址
+  client:
+    # 表示是否把自己注册进eurekaserver 默认为true
+    register-with-eureka: true
+    # 是否从eurekaserver抓取已有的注册信息，默认为true，单节点无所谓，集群必须设置为true才能配合ribbon使用负载均衡
+    fetch-registry: true
+    service-url:
+      #      defaultZone: http://localhost:7001/eureka
+      defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka
+# 服务名
+spring:
+  application:
+    name: cloud-config-center
+  cloud:
+    # config客户端配置
+    config:
+      label: master # 分支名称
+      name: config # 配置文件名称
+      profile: dev # 读取后缀名称 master分支上读取config-dev配置文件
+      uri: http://localhost:3344 # 配置中心地址
+#暴露监控端口
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
