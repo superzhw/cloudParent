@@ -1,0 +1,14 @@
+server:
+  port: 5021
+# 服务名
+spring:
+  application:
+    name: cloud-nacos-order
+# 注册进nacos
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+# 消费者将要去访问得微服务名称（注册成功进nacos的微服务提供者）
+servise-url:
+  nacos-user-service: http://cloud-nacos-payment

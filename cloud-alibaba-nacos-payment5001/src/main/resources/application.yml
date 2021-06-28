@@ -1,0 +1,17 @@
+server:
+  port: 5001
+# 服务名
+spring:
+  application:
+    name: cloud-nacos-payment
+# 注册进nacos
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+#
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
