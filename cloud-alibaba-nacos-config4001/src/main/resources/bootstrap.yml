@@ -12,6 +12,10 @@ spring:
       config:
         server-addr: localhost:8848 # nacos配置中心地址
         file-extension: yaml
-
+#        namespace: cbc28c71-8a18-4886-b8f8-7f4578b87b86
+#        group: DEV_GROUP # 分组
+# dataid
 # ${spring.application.name}-${spring.profiles.active}.${spring.cloud.config.file-extension}
 # cloud-nacos-config-dev.yaml
+
+# namespace + gruop + servce 命名空间 + 分组 + dataid
