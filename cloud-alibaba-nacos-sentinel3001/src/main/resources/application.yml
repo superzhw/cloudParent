@@ -1,14 +1,14 @@
 server:
-  port: 5001
+  port: 3001
 # 服务名
 spring:
   application:
-    name: cloud-nacos-payment
+    name: cloud-nacos-sentinel
 # 注册进nacos
   cloud:
     nacos:
       discovery:
-        server-addr: 192.168.159.128:2222
+        server-addr: localhost:8848
 #
 management:
   endpoints:
